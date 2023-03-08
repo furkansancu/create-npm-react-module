@@ -1,0 +1,29 @@
+{
+  "name": "create-npm-react-module",
+  "version": "0.1.0",
+  "description": "Easy to use CLI for creating a react environment to develop and publish React component packages.",
+  "main": "lib/index.js",
+  "bin": {
+    "cli": "./bin/cli.js"
+  },
+  "scripts": {
+    "test": "node lib/index.js test-project",
+    "release": "npm publish --registry=https://registry.npmjs.org --access=public",
+    "release:alpha": "npm publish --tag alpha --registry=https://registry.npmjs.org --access=public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkansancu/create-npm-react-module.git"
+  },
+  "keywords": [
+    "React",
+    "Npm",
+    "Package",
+    "Component"
+  ],
+  "author": "Adem Furkan SANCU (furkansancu@outlook.com)",
+  "license": "MIT",
+  "bugs": { "url": "https://github.com/furkansancu/create-npm-react-module/issues" },
+  "homepage": "https://github.com/furkansancu/create-npm-react-module#readme",
+  "engines": { "node": ">=8.0.0" }
+}
