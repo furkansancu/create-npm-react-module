@@ -1,6 +1,6 @@
 # create-npm-react-module
 test-app/
-**/lib/**
+lib/
 
 # Logs
 logs
