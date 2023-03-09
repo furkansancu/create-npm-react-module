@@ -1,6 +1,6 @@
 {
   "name": "create-npm-react-module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Easy to use CLI for creating a react environment to develop and publish React component packages.",
   "main": "lib/index.js",
   "bin": {
@@ -10,8 +10,8 @@
     "dev": "yarn build && yarn test",
     "build": "webpack",
     "test": "node lib/index.js",
-    "release": "npm publish --registry=https://registry.npmjs.org --access=public",
-    "release:alpha": "npm publish --tag alpha --registry=https://registry.npmjs.org --access=public"
+    "release": "yarn build && npm publish --registry=https://registry.npmjs.org --access=public",
+    "release:alpha": "yarn build && npm publish --tag alpha --registry=https://registry.npmjs.org --access=public"
   },
   "repository": {
     "type": "git",
