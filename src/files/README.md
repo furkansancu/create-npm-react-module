@@ -21,7 +21,3 @@ Your package can be import from `dist/index.js` file with code below:
 ```sh
 import { MyComponent } from 'my-package';
 ```
-Or this from source file code below:
-```sh
-import { MyComponent } from 'my-package/src/index.js';
-```
