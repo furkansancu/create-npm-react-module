@@ -1,0 +1,19 @@
+.MyComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 55px;
+    border: 5px solid;
+    font-size: 1.35em;
+    font-weight: 700;
+    transition: all ease-in-out 0.2s;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #16161d;
+    }
+}

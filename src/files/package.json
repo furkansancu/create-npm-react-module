@@ -1,0 +1,9 @@
+{
+    "name": "project-name",
+    "version": "0.1",
+    "license": "ISC",
+    "scripts": {
+        "start": "webpack serve --mode development",
+        "build": "webpack --mode production"
+    }
+}
