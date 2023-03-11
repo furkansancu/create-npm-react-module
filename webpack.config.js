@@ -1,4 +1,6 @@
+const { IgnorePlugin } = require('webpack');
 const path = require("path");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
@@ -24,13 +26,24 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new IgnorePlugin({ resourceRegExp: /^fsevents$/ }),
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: '**/{.*,*}',
+                context: './src/template/',
+                to: './template/[path][name][ext].example',
+                info: { minimized: true },
+            }]
+        })
+    ],
     optimization: {
         minimize: true,
         minimizer: [
             new TerserPlugin({
                 terserOptions: { format: { comments: false } },
-                extractComments: false,
-            }),
+                extractComments: false
+            })
         ]
-    },
+    }
 };

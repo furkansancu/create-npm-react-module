@@ -7,6 +7,13 @@ const errorCodes = {
     "project_name_undefined": {
         "title": red("ERR:"),
         "description": `${whiteBright("Project name can't left blank, please enter a project name.")} ${yellow("(npx create-npm-react-module [project-name])")}`
+    },
+
+    "copying_failed": error_desc => {
+        return {
+            "title": red("ERR:"),
+            "description": `${whiteBright("Creating source files process failed, you might want to file an issue on https://github.com/furkansancu/create-npm-react-module/issues/new")}\n${red("ERROR-DESC:")}${yellow(error_desc)}`
+        }
     }
 }
 
@@ -41,8 +48,10 @@ const infoCodes = {
 }
 
 const consoleMenager = {
-    error (code, kill = false) {
-        console.log(`${errorCodes[code].title} ${errorCodes[code].description}`);
+    error (code, kill = false, props) {
+        let value;
+        value = props != undefined ? errorCodes[code](props) : errorCodes[code];
+        console.log(`${value.title} ${value.description}`);
 
         if (kill) process.exit();
     },
