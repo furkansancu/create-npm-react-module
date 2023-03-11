@@ -1,6 +1,6 @@
 {
   "name": "create-npm-react-module",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Easy to use CLI for creating a react environment to develop and publish React component packages.",
   "main": "lib/index.js",
   "bin": {
